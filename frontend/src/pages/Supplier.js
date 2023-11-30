@@ -75,7 +75,7 @@ function Supplier(){
                     <button type="button" onClick={(e) => deleteSupplier(e, item.id)} className="btn btn-danger">Delete</button>
                 </td>
                 <td>
-                <Link to="/" className="btn btn-success">View</Link>
+                <Link to={`/suppliers/${item.id}/product`} className="btn btn-success">View</Link>
                 </td>
             </tr>
         )
