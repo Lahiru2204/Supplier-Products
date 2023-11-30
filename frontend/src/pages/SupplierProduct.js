@@ -13,7 +13,7 @@ function SupplierProduct(){
     let {id} = useParams();
 
     const [loading,SetLoading] = useState(true)
-    const [products, setProducts] = useState({})
+    const [products, setProducts] = useState([])
 
     useEffect(() =>{
 
@@ -38,6 +38,14 @@ function SupplierProduct(){
 if(loading){
     return(
         <Loading />
+    )
+}
+
+if(Object.keys(products).length === 0){
+    return(
+        <div className="container">
+            <h3>No Products from the Supplier</h3>
+        </div>
     )
 }
 
